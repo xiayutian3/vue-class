@@ -4,17 +4,22 @@
     <!--<div> 根store：{{$store.state.appName}}</div>-->
     <!--<div> modules:{{$store.state.user.name}}</div>-->
     <!--<div> 根store：{{appName}}</div>-->
-    <div> modules:{{username}}</div>
+    <div> 用户名modules:{{username}}</div>
     <!--<div>name:{{name}}</div>-->
     <input type="text" v-model="inpVal">
     <div>last word : {{inpLastVal}}</div>
     <div>appNameVersion: {{appNameWithVersion}}</div>
     <div>modules中的getters：{{firstName}}</div>
-
+    <button @click="changName">
+      修改APP名
+    </button>
+    <div>appVersion:{{appVersion}}</div>
+    <button @click="registerModule">动态注册一个模块</button>
+    <div v-for="(item,index) in todoList" :key="index">{{item}}</div>
   </div>
 </template>
 <script>
-  import {mapState,mapGetters} from 'vuex'
+  import {mapState,mapGetters,mapMutations,mapActions} from 'vuex'
 
   import state from "../../../vue-cource/src/store/state";
   // import { createNamespacedHelpers } from 'vuex'
@@ -47,7 +52,7 @@
       // ...mapGetters('user',['firstName']),
       firstName(){
           return this.$store.getters['user/firstName']
-      }
+      },
       // ...mapState({
       //   // 使用了createNamespacedHelpers('user'),就不能使用mapState拿得到appName了
       //   username: state => state.name,
@@ -70,10 +75,63 @@
       //   username: state => state.user.name
       // })
 
+      // appVersion(){
+      //   return this.$store.state.appVersion
+      // },
+      ...mapState({
+        appVersion: state => state.appVersion,
+        appName: state => state.appName,
+        //mapState中不管你填不添加模块名  namespaced:true,  都要经过  state.模块名.xxx 来获取
+        //modules中 mapGetters,mapMutations,mapActions 没有namespaced:true 就不用  .模块名.xxx  获取，
+        // 直接相当于没有模块，直接获取即可  例如：...mapGetters(['appNameWithVersion'])
+        // todoList: state => state.todo?state.todo.todoList:[],
+        todoList: state => state.user.todo?state.user.todo.todoList:[],
+      }),
+
     },
     mounted(){
       console.log(this.$store.getters)
       // console.log(this.$store.state)
+    },
+    methods:{
+      ...mapActions(['updateAppName']),
+      ...mapMutations(['SET_APP_NAME','setNewProp']),
+      ...mapMutations('user',['SET_NAME']),
+      changName(){
+        // this.$store.commit('SET_APP_NAME','sala')
+        // this.$store.commit({
+        //   type:'SET_APP_NAME',
+        //   appName:'newAppName'
+        // });
+        this.$store.commit({
+          type:'setNewProp'
+        });
+        // this.SET_APP_NAME({appName:'newAppName'});
+        this.SET_NAME('new123')
+        // this.updateAppName()
+        this.$store.dispatch('updateAppName')
+      },
+      //动态注册模块
+      registerModule(){
+        // this.$store.registerModule('todo',{
+        //   state:{
+        //     todoList:[
+        //       '学习todolist',
+        //       '学习actions',
+        //     ]
+        //   }
+        // })
+
+        // 在user中建子模块
+        this.$store.registerModule(['user','todo'],{
+          state:{
+            todoList:[
+              '学习todolist',
+              '学习actions',
+            ]
+          }
+        })
+      }
     }
   }
 </script>
