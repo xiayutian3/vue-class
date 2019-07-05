@@ -8,6 +8,9 @@ const mutations = {
   },
   setNewProp(state){
     Vue.set(state,'appVersion','v2.0')
+  },
+  SET_HANDLESTATE(state,val){
+    state.yyz = val
   }
 }
 export default mutations
