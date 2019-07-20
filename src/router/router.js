@@ -25,6 +25,11 @@ export default new Router({
       path: '/countto',
       name: 'Countto',
       component: Countto
+    },
+    {
+      path: '/split-pane',
+      name: 'split-pane',
+      component: () => import('../views/split-pane.vue')
     }
   ]
 })
