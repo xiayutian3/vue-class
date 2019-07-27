@@ -30,6 +30,11 @@ export default new Router({
       path: '/split-pane',
       name: 'split-pane',
       component: () => import('../views/split-pane.vue')
+    },
+    {
+      path: '/render_page',
+      name: 'render_page',
+      component: () => import('../views/render-page.vue')
     }
   ]
 })
