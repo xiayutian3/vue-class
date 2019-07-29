@@ -35,6 +35,11 @@ export default new Router({
       path: '/render_page',
       name: 'render_page',
       component: () => import('../views/render-page.vue')
+    },
+    {
+      path: '/menu_page',
+      name: 'menu_page',
+      component: () => import('../views/menu-page.vue')
     }
   ]
 })

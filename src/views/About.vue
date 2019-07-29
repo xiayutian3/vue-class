@@ -31,7 +31,7 @@
   import AInput from '@/components/AInput.vue'
   import {mapState,mapGetters,mapMutations,mapActions} from 'vuex'
 
-  import state from "../../../vue-cource/src/store/state";
+  // import state from "../../../vue-cource/src/store/state";
   // import { createNamespacedHelpers } from 'vuex'
   // const { mapState} = createNamespacedHelpers('user')
   export default {
