@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '../views/Home.vue'
+import Layout from '../views/layout.vue'
 const Countto = () => import('@/views/count-to.vue')
 // import Countto from '@/views/count-to.vue'
 
@@ -26,8 +27,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home
+      name: 'Layout',
+      component: Layout
     },
     {
       path: '/about',
