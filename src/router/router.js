@@ -6,6 +6,22 @@ const Countto = () => import('@/views/count-to.vue')
 
 Vue.use(Router)
 
+const HAS_LOGINED = false
+
+// router.beforeEach((to,from,next)=>{
+//   if (to.name !== 'login'){
+//     if (HAS_LOGINED) next()
+//     else next({name:'login'})
+//   }else {
+//     if(HAS_LOGINED) next({name:'login'})
+//     else next()
+//   }
+// })
+
+
+
+
+
 export default new Router({
   routes: [
     {
@@ -40,6 +56,11 @@ export default new Router({
       path: '/menu_page',
       name: 'menu_page',
       component: () => import('../views/menu-page.vue')
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('@/views/login.vue')
     }
   ]
 })

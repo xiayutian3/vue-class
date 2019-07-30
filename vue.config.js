@@ -15,6 +15,6 @@ module.exports = {
       host: 'localhost', // 指定使用一个 host。默认是 localhost 或者 '127.0.0.1'
       port: 8080, // 端口地址
       https: false, // 使用https提供服务
-      proxy: null, // string | Object 代理设置
+      proxy: 'http://localhost:3000', // string | Object 代理设置
   }
 }
