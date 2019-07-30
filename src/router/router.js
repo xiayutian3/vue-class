@@ -28,7 +28,14 @@ export default new Router({
     {
       path: '/',
       name: 'Layout',
-      component: Layout
+      component: Layout,
+      children:[
+        {
+          path:'home',
+          name:'Home',
+          component:Home
+        }
+      ]
     },
     {
       path: '/about',
