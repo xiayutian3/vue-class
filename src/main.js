@@ -6,7 +6,7 @@ import Count from '@@/count-to'
 
 //引入iview
 import 'iview/dist/styles/iview.css';
-import { Layout,Header,Sider,Content,Icon,Card ,Row,Col} from 'iview';
+import { Layout,Header,Sider,Content,Icon,Card ,Row,Col,Menu,Submenu ,MenuItem ,Tooltip,Dropdown,DropdownMenu,DropdownItem  } from 'iview';
 
 
 Vue.component('Layout', Layout)
@@ -17,6 +17,13 @@ Vue.component('Icon',Icon)
 Vue.component('Card',Card)
 Vue.component('Row',Row)
 Vue.component('Col',Col)
+Vue.component('Menu',Menu)
+Vue.component('Submenu',Submenu)
+Vue.component('MenuItem',MenuItem)
+Vue.component('Tooltip',Tooltip)
+Vue.component('Dropdown',Dropdown)
+Vue.component('DropdownMenu',DropdownMenu)
+Vue.component('DropdownItem',DropdownItem)
 
 
 
