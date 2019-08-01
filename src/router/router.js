@@ -34,6 +34,11 @@ export default new Router({
           path:'home',
           name:'Home',
           component:Home
+        },
+        {
+          path:'table',
+          name:'table',
+          component:() => import('../views/table.vue')
         }
       ]
     },
