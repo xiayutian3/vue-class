@@ -39,6 +39,11 @@ export default new Router({
           path:'table',
           name:'table',
           component:() => import('../views/table.vue')
+        },
+        {
+          path: 'folder_tree',
+          name: 'folder_tree',
+          component: () => import('../views/folder-tree.vue')
         }
       ]
     },

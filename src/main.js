@@ -7,7 +7,7 @@ import Count from '@@/count-to'
 //引入iview
 import 'iview/dist/styles/iview.css';
 import {
-  Layout,Header,Sider,Content,Icon,Card ,Row,Col,Menu,Submenu ,MenuItem ,Tooltip,Dropdown,DropdownMenu,DropdownItem,Table ,Button,Input
+  Layout,Header,Sider,Content,Icon,Card ,Row,Col,Menu,Submenu ,MenuItem ,Tooltip,Dropdown,DropdownMenu,DropdownItem,Table ,Button,Input,Tree
 } from 'iview';
 
 
@@ -29,6 +29,7 @@ Vue.component('DropdownItem',DropdownItem)
 Vue.component('Table',Table)
 Vue.component('Button',Button)
 Vue.component('Input',Input)
+Vue.component('Tree',Tree)
 
 
 
