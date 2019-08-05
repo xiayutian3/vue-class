@@ -7,7 +7,7 @@ import Count from '@@/count-to'
 //引入iview
 import 'iview/dist/styles/iview.css';
 import {
-  Layout,Header,Sider,Content,Icon,Card ,Row,Col,Menu,Submenu ,MenuItem ,Tooltip,Dropdown,DropdownMenu,DropdownItem,Table ,Button,Input,Tree
+  Layout,Header,Sider,Content,Icon,Card ,Row,Col,Menu,Submenu ,MenuItem ,Tooltip,Dropdown,DropdownMenu,DropdownItem,Table ,Button,Input,Tree,Modal,Message
 } from 'iview';
 
 
@@ -30,9 +30,12 @@ Vue.component('Table',Table)
 Vue.component('Button',Button)
 Vue.component('Input',Input)
 Vue.component('Tree',Tree)
+Vue.component('Modal',Modal)
+Vue.component('Message',Message)
 
 
-
+Vue.prototype.$Modal = Modal
+Vue.prototype.$Message = Message
 Vue.config.productionTip = false
 
 const handleClick = (event)=>{
