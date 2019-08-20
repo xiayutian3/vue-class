@@ -5,6 +5,7 @@ import mutations from './mutations'
 import actions from './actions'
 import getters from './getters'
 import user from './module/user'
+import noname from './module/noname'
 import saveInLocal from './plugin/saveInLocal'
 
 Vue.use(Vuex)
@@ -17,7 +18,8 @@ export default new Vuex.Store({
   actions,
   getters,
   modules:{
-	 user
+	 user,
+   noname
   },
   // plugins:[saveInLocal]
 })
