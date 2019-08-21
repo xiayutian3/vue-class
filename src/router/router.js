@@ -84,6 +84,16 @@ export default new Router({
       path: '/test_vuex',
       name: 'test_vuex',
       component: () => import('@/views/test-vuex.vue')
+    },
+    {
+      path: '/form',
+      name: 'form',
+      component: () => import('@/views/form.vue')
+    },
+    {
+      path: '/forming',
+      name: 'forming',
+      component: () => import('@/views/forming.vue')
     }
   ]
 })

@@ -7,7 +7,8 @@ import Count from '@@/count-to'
 //引入iview
 import 'iview/dist/styles/iview.css';
 import {
-  Layout,Header,Sider,Content,Icon,Card ,Row,Col,Menu,Submenu ,MenuItem ,Tooltip,Dropdown,DropdownMenu,DropdownItem,Table ,Button,Input,Tree,Modal,Message
+  Layout,Header,Sider,Content,Icon,Card ,Row,Col,Menu,Submenu ,MenuItem ,Tooltip,Dropdown,DropdownMenu,DropdownItem,Table ,Button,Input,Tree,Modal,Message,Form,FormItem,Slider,Select,Option,
+  CheckboxGroup,Checkbox,RadioGroup,Radio,Switch
 } from 'iview';
 
 
@@ -32,6 +33,24 @@ Vue.component('Input',Input)
 Vue.component('Tree',Tree)
 Vue.component('Modal',Modal)
 Vue.component('Message',Message)
+Vue.component('Form',Form )
+Vue.component('FormItem',FormItem )
+Vue.component('Slider',Slider )
+Vue.component('Select',Select )
+Vue.component('Option',Option )
+Vue.component('CheckboxGroup',CheckboxGroup )
+Vue.component('Checkbox',Checkbox )
+Vue.component('RadioGroup',RadioGroup )
+Vue.component('Radio',Radio )
+Vue.component('i-switch',Switch )
+
+
+
+
+
+
+
+
 
 
 Vue.prototype.$Modal = Modal
