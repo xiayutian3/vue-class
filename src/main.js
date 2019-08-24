@@ -3,6 +3,11 @@ import App from './App.vue'
 import router from './router/router'
 import store from './store'
 import Count from '@@/count-to'
+//字体图标
+// symbol引用
+import '@/assets/font/iconfont'
+// iView或者其他引用
+import '@/assets/font/iconfont.css'
 
 //引入iview
 import 'iview/dist/styles/iview.css';

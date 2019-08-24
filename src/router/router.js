@@ -129,6 +129,11 @@ export default new Router({
       path: '/forming',
       name: 'forming',
       component: () => import('@/views/forming.vue')
+    },
+    {
+      path: '/icon_page',
+      name: 'icon_page',
+      component: () => import('@/views/icon_page.vue')
     }
   ]
 })
