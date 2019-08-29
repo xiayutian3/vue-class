@@ -134,6 +134,11 @@ export default new Router({
       path: '/icon_page',
       name: 'icon_page',
       component: () => import('@/views/icon_page.vue')
+    },
+    {
+      path: '/optimize',
+      name: 'optimize',
+      component: () => import('@/views/optimize.vue')
     }
   ]
 })

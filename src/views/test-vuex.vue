@@ -34,6 +34,7 @@
         this.SET_NAME('mutName')
       },
       actFun(){
+        this.$store.dispatch('set_name',1111)
         this.SET_NAME('actName')
       }
 
