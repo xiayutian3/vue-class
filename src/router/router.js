@@ -64,27 +64,50 @@ export default new Router({
       path: '/',
       name: 'Layout',
       component: Layout,
+      meta:{
+        title:'主页'
+      },
       children:[
         {
           path:'home',
           name:'Home',
-          component:Home
+          component:Home,
+          meta:{
+            title:'首页'
+          }
         },
         {
           path:'table',
           name:'table',
+          meta:{
+            title:'table'
+          },
           component:() => import('../views/table.vue')
         },
         {
           path: 'folder_tree',
           name: 'folder_tree',
+          meta:{
+            title:'folder_tree'
+          },
           component: () => import('../views/folder-tree.vue')
-        }
+        },
+        {
+          path: 'params/:id',
+          name: 'params',
+          meta:{
+            title:'params'
+          },
+          component: () => import('../views/params.vue')
+        },
       ]
     },
     {
       path: '/about',
       name: 'about',
+      meta:{
+        title:'about'
+      },
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
@@ -93,51 +116,81 @@ export default new Router({
     {
       path: '/countto',
       name: 'Countto',
+      meta:{
+        title:'countto'
+      },
       component: Countto
     },
     {
       path: '/split-pane',
       name: 'split-pane',
+      meta:{
+        title:'split-pane'
+      },
       component: () => import('../views/split-pane.vue')
     },
     {
       path: '/render_page',
       name: 'render_page',
+      meta:{
+        title:'render_page'
+      },
       component: () => import('../views/render-page.vue')
     },
     {
       path: '/menu_page',
       name: 'menu_page',
+      meta:{
+        title:'menu_page'
+      },
       component: () => import('../views/menu-page.vue')
     },
     {
       path: '/login',
       name: 'login',
+      meta:{
+        title:'login'
+      },
       component: () => import('@/views/login.vue')
     },
     {
       path: '/test_vuex',
       name: 'test_vuex',
+      meta:{
+        title:'test_vuex'
+      },
       component: () => import('@/views/test-vuex.vue')
     },
     {
       path: '/form',
       name: 'form',
+      meta:{
+        title:'form'
+      },
       component: () => import('@/views/form.vue')
     },
     {
       path: '/forming',
       name: 'forming',
+      meta:{
+        title:'forming'
+      },
       component: () => import('@/views/forming.vue')
     },
     {
       path: '/icon_page',
       name: 'icon_page',
+      meta:{
+        title:'icon_page'
+      },
       component: () => import('@/views/icon_page.vue')
     },
     {
       path: '/optimize',
       name: 'optimize',
+      meta:{
+        title:'optimize'
+      },
       component: () => import('@/views/optimize.vue')
     }
   ]

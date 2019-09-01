@@ -1,20 +1,20 @@
 <template>
-  <Submenu :name="parent.title">
+  <Submenu :name="parent.meta.title">
     <template slot="title">
       <Icon :type="parent.icon" />
-      {{parent.title}}
+      {{parent.meta.title}}
     </template>
     <template v-for="item in parent.children">
       <re-submenu
         v-if="item.children"
-        :key="item.title"
-        :name="item.title"
+        :key="item.meta.title"
+        :name="item.meta.title"
         :parent="item"
       >
       </re-submenu>
-      <MenuItem v-else :key="item.title" :name="item.title">
+      <MenuItem v-else :key="item.meta.title" :name="item.meta.title">
         <Icon :type="item.icon" />
-        {{item.title}}
+        {{item.meta.title}}
       </MenuItem>
     </template>
   </Submenu>

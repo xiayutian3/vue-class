@@ -34,8 +34,10 @@
         this.SET_NAME('mutName')
       },
       actFun(){
+        //没有 模块空间名的话  可以直接调用模块里的方法 this.$store.dispatch('set_name',1111)
+        //如果 开启空间命名   this.$store.dispatch('模块名/set_name',1111)
         this.$store.dispatch('set_name',1111)
-        this.SET_NAME('actName')
+        this.set_name('actName')
       }
 
     }

@@ -2,14 +2,14 @@
   <Dropdown class="ddown" placement="right-start" @on-click="slectDown">
     <a class="drop-menu-aa" href="###" :class="showTitle?'no-center':''">
       <Icon :type="parent.icon" :color="iconColor" size="24"></Icon>
-      <span :style="{color: iconColor}" v-if="showTitle">{{parent.title}}</span>
+      <span :style="{color: iconColor}" v-if="showTitle">{{parent.meta.title}}</span>
     </a>
     <DropdownMenu slot="list">
       <template v-for="item in parent.children">
-        <re-dropdown v-if="item.children" :key="item.title" :parent="item"></re-dropdown>
-        <DropdownItem  v-else :key="item.title"  :name="item.title">
+        <re-dropdown v-if="item.children" :key="item.meta.title" :parent="item"></re-dropdown>
+        <DropdownItem  v-else :key="item.meta.title"  :name="item.meta.title">
           <Icon :type="parent.icon" color="#515a6e" size="24"></Icon>
-          {{item.title}}
+          {{item.meta.title}}
         </DropdownItem>
       </template>
     </DropdownMenu>

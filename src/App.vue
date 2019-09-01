@@ -7,6 +7,19 @@
     <router-view/>
   </div>
 </template>
+<script>
+  import {mapMutations} from 'vuex'
+  export default {
+    methods:{
+      ...mapMutations('tabnav',['UPDATE_ROUTER']),
+    },
+    watch:{
+      '$route'(newVal,oldVal){
+        this.UPDATE_ROUTER(newVal)
+      }
+    },
+  }
+</script>
 
 <style lang="less">
   *{

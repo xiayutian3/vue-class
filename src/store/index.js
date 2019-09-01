@@ -7,6 +7,7 @@ import getters from './getters'
 import user from './module/user'
 // import routers from './module/routers'
 import noname from './module/noname'
+import tabnav from './module/tabnav'
 import saveInLocal from './plugin/saveInLocal'
 
 Vue.use(Vuex)
@@ -21,6 +22,7 @@ export default new Vuex.Store({
   modules:{
 	  user,
     noname,
+    tabnav
     // routers
   },
   // plugins:[saveInLocal]

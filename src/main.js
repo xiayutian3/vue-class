@@ -13,7 +13,7 @@ import '@/assets/font/iconfont.css'
 import 'iview/dist/styles/iview.css';
 import {
   Layout,Header,Sider,Content,Icon,Card ,Row,Col,Menu,Submenu ,MenuItem ,Tooltip,Dropdown,DropdownMenu,DropdownItem,Table ,Button,Input,Tree,Modal,Message,Form,FormItem,Slider,Select,Option,
-  CheckboxGroup,Checkbox,RadioGroup,Radio,Switch
+  CheckboxGroup,Checkbox,RadioGroup,Radio,Switch,Tabs,TabPane
 } from 'iview';
 
 
@@ -48,6 +48,8 @@ Vue.component('Checkbox',Checkbox )
 Vue.component('RadioGroup',RadioGroup )
 Vue.component('Radio',Radio )
 Vue.component('i-switch',Switch )
+Vue.component('Tabs',Tabs )
+Vue.component('TabPane',TabPane )
 
 
 

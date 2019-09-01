@@ -6,7 +6,7 @@
     <!--&gt;</edit-table>-->
 
     <edit-table-mul :columns="columns"  v-model="tableData"></edit-table-mul>
-
+    <Button @click="turnTo">打开参数页</Button>
   </div>
 </template>
 
@@ -57,6 +57,15 @@
     methods:{
       successCallback({row,index,column,message}){
         // console.log({row,index,column,message})
+      },
+      turnTo(){
+        let id = 'params'+(Math.random()*100).toFixed(0)
+        this.$router.push({
+          name:"params",
+          params:{
+            id
+          }
+        })
       }
     }
   }
